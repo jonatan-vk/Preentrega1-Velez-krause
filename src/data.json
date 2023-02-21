@@ -1,0 +1,38 @@
+[
+    {
+      "id": 1,
+      "name": "Inmueble 1",
+      "price": 200,
+      "descripcion":
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum deleniti aut dignissimos explicabo ab, cumque eligendi ducimus numquam quibusdam minima.",
+      "stock": 3,
+      "category": "Departamento"
+    },
+    {
+      "id": 2,
+      "name": "Inmueble 2",
+      "price": 200,
+      "descripcion":
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum deleniti aut dignissimos explicabo ab, cumque eligendi ducimus numquam quibusdam minima.",
+      "stock": 8,
+      "category": "Departamento"
+    },
+    {
+      "id": 3,
+      "name": "Inmueble 3",
+      "price": 300,
+      "descripcion":
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum deleniti aut dignissimos explicabo ab, cumque eligendi ducimus numquam quibusdam minima.",
+      "stock": 3,
+      "category": "Casa"
+    },
+    {
+      "id": 4,
+      "name": "Inmueble 4",
+      "price": 100,
+      "descripcion":
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum deleniti aut dignissimos explicabo ab, cumque eligendi ducimus numquam quibusdam minima.",
+      "stock": 5,
+      "category": "Lote"
+    }
+  ]
