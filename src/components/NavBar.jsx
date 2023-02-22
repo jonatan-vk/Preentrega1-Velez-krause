@@ -5,9 +5,9 @@ const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
     <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <Link to={"/"} className="navbar-brand">
             <img src="/images/logo.png" alt="Logo PENTA" width="90" height="auto" />
-          </a>
+          </Link>
       <Link to={"/"} className="navbar-brand">Penta</Link>
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
@@ -15,7 +15,7 @@ const NavBar = () => {
       <div className="collapse navbar-collapse container-fluid" id="navbarNavDropdown">
         <ul className="navbar-nav container-fluid">
           <li className="nav-item">
-            <a className="nav-link active" aria-current="page" href="#">Home</a>
+            <Link to={"/"} className="nav-link active" aria-current="page">Home</Link>
           </li>
           <li className="nav-item">
             <a className="nav-link" href="#">Catalogo</a>

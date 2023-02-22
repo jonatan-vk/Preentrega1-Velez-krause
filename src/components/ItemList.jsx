@@ -1,8 +1,11 @@
 import React from 'react'
+import Item from './Item'
 
-function ItemList() {
+function ItemList({inmuebles}) {
   return (
-    <div>ItemList</div>
+    <div>
+        {inmuebles.map((item)=><Item key={item.id} item={item}/>)}
+    </div>
   )
 }
 

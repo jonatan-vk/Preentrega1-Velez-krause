@@ -1,30 +1,34 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import Item from './Item';
+import ItemDetail from './ItemDetail';
 
 
 function ItemDetailContainer() {
-    const { id } = useParams();
-        //console.log(id);
+  const {id} = useParams();
 
-        /* const [inmuebles, setInmuebles] = useState([]);
+  const [inmueble, setInmueble] = useState({});
 
-    useEffect(() => {
+  useEffect(()=> {
     async function fetchData() {
       try {
-        const response = await fetch(Data);
+        const response = await fetch('/src/data.json');
         const data = await response.json();
-        setInmuebles(data);
+        setInmueble(data.find((Item)=> Item.id === parseInt(id)));
       } catch (error) {
         console.log(error);
       }
     }
     fetchData();
-  }, []); */
-
+  },[]);
+    console.log(inmueble)
     
   return (
-    <div>ItemDetailContainer</div>
+    <>
+      <ItemDetail inmueble={inmueble} />
+    </>
   )
 }
+//ItemDetailContainer({inmueble});
 
 export default ItemDetailContainer

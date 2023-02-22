@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import Data from "../data.json"
+//import Data from "../data.json"
 import ItemList from './ItemList'
 
 
@@ -9,15 +9,16 @@ const ItemListContainer = () => {
   const [inmuebles, setInmuebles] = useState([]);
 
   useEffect(() => {
-    fetch('./data.json')
+    fetch('/src/data.json')
       .then((res) => res.json())
       .then((data) => setInmuebles(data))
       .catch((err) => console.log(err));
   }, []);
+  console.log(inmuebles)
   return (
-    <div>
-        <p className='TituloNuevo'>ItemListContainer</p>
-    </div>
+    <>
+     <ItemList inmuebles={inmuebles} />   
+    </>
   )
 }
 
