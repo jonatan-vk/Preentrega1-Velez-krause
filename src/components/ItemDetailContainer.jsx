@@ -7,12 +7,12 @@ import ItemDetail from './ItemDetail';
 function ItemDetailContainer() {
   const {id} = useParams();
 
-  const [inmueble, setInmueble] = useState({});
+  const [inmueble, setInmueble] = useState();
 
   useEffect(()=> {
     async function fetchData() {
       try {
-        const response = await fetch('/src/data.json');
+        const response = await fetch('/data/data.json');
         const data = await response.json();
         setInmueble(data.find((Item)=> Item.id === parseInt(id)));
       } catch (error) {
@@ -20,15 +20,13 @@ function ItemDetailContainer() {
       }
     }
     fetchData();
-  },[]);
+  },[id]);
     console.log(inmueble)
     
   return (
     <>
-      <ItemDetail inmueble={inmueble} />
+      {inmueble ? <ItemDetail inmueble={inmueble} /> : <h1>Cargando...</h1>}
     </>
   )
 }
-//ItemDetailContainer({inmueble});
-
 export default ItemDetailContainer
