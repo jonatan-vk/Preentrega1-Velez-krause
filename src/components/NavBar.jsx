@@ -25,9 +25,9 @@ const NavBar = () => {
               Categorias
             </a>
             <ul className="dropdown-menu">
-              <li><Link to={`/category/${"Departamentos"}`} className="dropdown-item">Departamentos</Link></li>
+              <li><Link to={`/category/${"Departamento"}`} className="dropdown-item">Departamentos</Link></li>
               <li><Link to={`/category/${"Casa"}`} className="dropdown-item">Casas</Link></li>
-              <li><Link to={`/category/${"Lotes"}`} className="dropdown-item">Lotes</Link></li>
+              <li><Link to={`/category/${"Lote"}`} className="dropdown-item">Lotes</Link></li>
             </ul>
           </li>
           <div className="contianer-fluid d-flex justify-content-end">
