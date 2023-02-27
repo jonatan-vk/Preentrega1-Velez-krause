@@ -18,16 +18,16 @@ const NavBar = () => {
             <Link to={"/"} className="nav-link active" aria-current="page">Home</Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">Catalogo</a>
+            <Link to={"/catalogue"} className="nav-link">Catalogo</Link>
           </li>
           <li className="nav-item dropdown">
             <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Categorias
             </a>
             <ul className="dropdown-menu">
-              <li><a className="dropdown-item" href="#">Departamentos</a></li>
-              <li><a className="dropdown-item" href="#">Casas</a></li>
-              <li><a className="dropdown-item" href="#">Lotes</a></li>
+              <li><Link to={`/category/${"Departamentos"}`} className="dropdown-item">Departamentos</Link></li>
+              <li><Link to={`/category/${"Casa"}`} className="dropdown-item">Casas</Link></li>
+              <li><Link to={`/category/${"Lotes"}`} className="dropdown-item">Lotes</Link></li>
             </ul>
           </li>
           <div className="contianer-fluid d-flex justify-content-end">
