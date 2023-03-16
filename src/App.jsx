@@ -9,7 +9,8 @@ import ItemDetailContainer from "./components/ItemDetailContainer";
 import ComponentA from "./components/ComponentA";
 //importamos componente de trabajo en clase
 import TrabajoEnClase from "./components/TrabajoEnClase";
-import StateCartProvider from "/context/StateCart";
+import StateCartProvider from "./context/StateCart";
+import Cart from "./components/Cart";
 
 
 
@@ -23,7 +24,7 @@ const App = () => {
             <Route exact path="/catalogue" element={<ItemListContainer />} />
             <Route exact path="/category/:category" element={ <ItemListContainer /> } /> 
             <Route exact path="/item/:id" element={ <ItemDetailContainer /> }  />
-            <Route exact path="/cart" element={ <CartWidget /> } /> 
+            <Route exact path="/cart" element={ <Cart /> } /> 
             <Route exact path="/tpClase" element={ <TrabajoEnClase />} />
           </Routes>
             <Footer />

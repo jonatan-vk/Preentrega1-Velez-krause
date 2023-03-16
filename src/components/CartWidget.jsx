@@ -4,8 +4,8 @@ import { CartContext } from '../context/StateCart';
 
 
 const CartWidget = () => {
-  const [ cart, setCart ] = useContext(CartContext
-  )
+  const { cart, setCart } = useContext(CartContext);
+  console.log(cart)
   return (
     <div>
       <span className="material-symbols-outlined"><span className="CampoCarrito">2</span>

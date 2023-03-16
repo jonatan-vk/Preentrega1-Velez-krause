@@ -1,7 +1,10 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { CartContext } from '../context/StateCart';
 
+ 
 const ItemCount = ({ stock, initial, onAdd }) => {
   const [count, setCount] = useState(initial);
+  const { cart, setCart } = useContext(CartContext);
   const restar = () => {
     if (count > 0) {
       setCount(count - 1);
@@ -13,6 +16,23 @@ const ItemCount = ({ stock, initial, onAdd }) => {
       setCount(count + 1);
     }
   };
+
+  /* const agregarACarrito = ()=> {
+    setCart((itemsActuales) => {
+      const itemsAAgregar = itemsActuales.find((item) => item.id === id);
+      if (itemsActuales) {
+        return itemsActuales.map((item) => {
+          if (item.id === id ) {
+            return { ...item, quantity: item.quantity + count};
+          } else {
+            return item;
+          }
+        });
+      } else {
+        return [...itemsActuales, { id, quantity: count, price}];
+      }
+    });
+  }; */
   return (
     <>
       <div>
@@ -27,7 +47,10 @@ const ItemCount = ({ stock, initial, onAdd }) => {
       <button
         className="btn btn-dark"
         disabled={count === 0 || stock === 0}
-        onClick={() => onAdd(count)}
+        onClick={() => {
+          onAdd(count);
+            /* agregarACarrito(); */
+        }}
       >
         Comprar
       </button>

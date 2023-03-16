@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
-import CartWidget from "./CartWidget" 
-
+import CartWidget from "./CartWidget"
+import Cart from "./Cart"
 const NavBar = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -32,7 +32,7 @@ const NavBar = () => {
           </li>
           <div className="contianer-fluid d-flex justify-content-end">
                 <li>
-                  <Link to={"/cart"}><CartWidget /></Link>
+                  <Link to={"/cart"}><Cart /></Link>
                 </li>
           </div>
         </ul>
