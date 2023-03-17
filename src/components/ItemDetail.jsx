@@ -1,12 +1,16 @@
 import React from 'react'
+import { useContext } from 'react';
+import { CartContext } from '../context/StateCart';
 import ItemCount from './ItemCount'
 
 
 const ItemDetail = ({ inmueble }) => {
   const { name, descripcion, price, stock, img, id } =
   inmueble;
+  const { agregarACarrito } = useContext(CartContext);
   const onAdd = (cantidad) => {
     console.log(`Compraste ${cantidad} items`);
+    agregarACarrito(id, cantidad, price)
     };
     return (
     <div>

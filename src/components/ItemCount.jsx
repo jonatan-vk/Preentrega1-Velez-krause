@@ -5,6 +5,7 @@ import { CartContext } from '../context/StateCart';
 const ItemCount = ({ stock, initial, onAdd }) => {
   const [count, setCount] = useState(initial);
   const { cart, setCart } = useContext(CartContext);
+  const { agregarACarrito } = useContext(CartContext);
   const restar = () => {
     if (count > 0) {
       setCount(count - 1);
@@ -49,7 +50,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
         disabled={count === 0 || stock === 0}
         onClick={() => {
           onAdd(count);
-            /* agregarACarrito(); */
+          agregarACarrito(id, count, price);
         }}
       >
         Comprar
