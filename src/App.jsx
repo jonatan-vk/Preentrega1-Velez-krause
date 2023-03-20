@@ -11,6 +11,7 @@ import ComponentA from "./components/ComponentA";
 import TrabajoEnClase from "./components/TrabajoEnClase";
 import StateCartProvider from "./context/StateCart";
 import Cart from "./components/Cart";
+import Collection from "./components/Collection";
 
 
 
@@ -28,9 +29,12 @@ const App = () => {
             <Route exact path="/tpClase" element={ <TrabajoEnClase />} />
           </Routes>
             <Footer />
+            <Collection />
+          {/* <ComponentA /> */}
         </BrowserRouter>
-         {/* <ComponentA /> */}
+
       </StateCartProvider>
+           
   
   )
 }

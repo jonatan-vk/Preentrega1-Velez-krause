@@ -13,6 +13,10 @@ const Cart = () => {
         Cart
         {cart.map((item) =>{
           console.log(cart)
+          if (cart === []){
+          {alert=("No hay productos agregados")}
+          }
+
             return (
                 <div key={item.id}>
                   <p>{item.name}</p>

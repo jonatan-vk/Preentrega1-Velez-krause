@@ -22,9 +22,10 @@ const agregarACarrito = (id, count, price)=> {
       return [...itemsActuales, { id, quantity: count, price}];
     }
   });
+  setCart([...cart, { id, quantity: count, price }]);
 };
 
-  return (
+return (
     <CartContext.Provider value={{ cart, setCart, agregarACarrito }}>
       {children}
     </CartContext.Provider>
